@@ -17,5 +17,19 @@
     "kind-error": "^1.0.0",
     "plugin-error": "^0.1.2"
   },
-  "keywords": []
+  "keywords": [
+    "any",
+    "check",
+    "error",
+    "instance",
+    "instanceof",
+    "is",
+    "kind",
+    "kindof",
+    "tool",
+    "type",
+    "typeof",
+    "util",
+    "validate"
+  ]
 }
