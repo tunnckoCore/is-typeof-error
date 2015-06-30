@@ -2,7 +2,7 @@
 
 > Check that given value is any type of error and instanceof Error
 
-[![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
+[![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][cov-img]][cov-url] [![dependency status][david-img]][david-url]
 
 
 ## Install
@@ -55,6 +55,9 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [codeclimate-url]: https://codeclimate.com/github/tunnckoCore/is-typeof-error
 [codeclimate-img]: https://img.shields.io/codeclimate/github/tunnckoCore/is-typeof-error.svg
+
+[cov-url]: https://codeclimate.com/github/tunnckoCore/is-typeof-error
+[cov-img]: https://img.shields.io/codeclimate/coverage/github/tunnckoCore/is-typeof-error.svg
 
 [travis-url]: https://travis-ci.org/tunnckoCore/is-typeof-error
 [travis-img]: https://img.shields.io/travis/tunnckoCore/is-typeof-error.svg
