@@ -1,6 +1,6 @@
 {
   "name": "is-typeof-error",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check that given value is any type of error and instanceof Error",
   "repository": "tunnckoCore/is-typeof-error",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
