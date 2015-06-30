@@ -16,12 +16,27 @@ npm test
 > For more use-cases see the [tests](./test.js)
 
 ```js
-var isTypeofError = require('is-typeof-error')
+var isError = require('is-typeof-error')
+var KindError = require('kind-error')
+var PluginError = require('plugin-error')
+
+var CustomClass = function () {}
+CustomClass.prototype.foo = function () {}
+
+isError(new TypeError('test')) //=> true
+isError(new SyntaxError('test')) //=> true
+isError(new SyntaxError('test')) //=> true
+isError(new PluginError('test', 'msg')) //=> true
+isError(new CustomClass('test')) //=> false
+isError(new Object({a: 'b'})) //=> false
+isError(new RegExp('test')) //=> false
+isError(Object.create({a: 'b'})) //=> false
+isError(/regex/) //=> false
+isError({a: 'b'}) //=> false
 ```
 
 
 ## Contributing
-
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/is-typeof-error/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
 
