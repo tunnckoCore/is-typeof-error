@@ -1,6 +1,6 @@
 {
   "name": "is-typeof-error",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check that given value is any type of error and instanceof Error",
   "repository": "tunnckoCore/is-typeof-error",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
@@ -10,7 +10,7 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "is-extendable": "^0.1.1"
+    "is-extendable": "~0.1.1"
   },
   "devDependencies": {
     "assertit": "^0.1.0",
