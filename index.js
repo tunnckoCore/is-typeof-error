@@ -7,7 +7,7 @@
 
 'use strict'
 
-var isObject = require('isobject')
+var isObject = require('is-extendable')
 
 module.exports = function isError (val) {
   return isObject(val) &&
