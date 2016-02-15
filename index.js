@@ -12,6 +12,5 @@ var isObject = require('is-extendable')
 module.exports = function isError (val) {
   return isObject(val) &&
     val instanceof Error &&
-    typeof val.message === 'string' &&
-    String(val).indexOf('Error') !== -1
+    typeof val.message === 'string'
 }
