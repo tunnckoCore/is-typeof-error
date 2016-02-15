@@ -26,11 +26,17 @@
     "is-typeof-error"
   ],
   "verb": {
+    "toc": false,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
     "related": {
       "list": [
         "error-base",
         "is-kindof",
         "kind-error",
+        "kind-of",
         "kind-of-extra",
         "kind-of-types"
       ]

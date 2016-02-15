@@ -13,31 +13,47 @@ npm i is-typeof-error --save
 > For more use-cases see the [tests](./test.js)
 
 ```js
-var isError = require('is-typeof-error')
-var KindError = require('kind-error')
-var PluginError = require('plugin-error')
+const isTypeofError = require('is-typeof-error')
+```
 
-var CustomClass = function () {}
+### [isTypeofError](index.js#L43)
+> Check that `val` is error.
+
+**Params**
+
+* `val` **{Error}**    
+* `returns` **{Boolean}**  
+
+**Example**
+
+```js
+const isTypeofError = require('is-typeof-error')
+const PluginError = require('plugin-error')
+const KindError = require('kind-error')
+
+const CustomClass = function () {}
 CustomClass.prototype.foo = function () {}
 
-isError(new TypeError('test')) //=> true
-isError(new SyntaxError('test')) //=> true
-isError(new SyntaxError('test')) //=> true
-isError(new PluginError('test', 'msg')) //=> true
-isError(new CustomClass('test')) //=> false
-isError(new Object({a: 'b'})) //=> false
-isError(new RegExp('test')) //=> false
-isError(Object.create({a: 'b'})) //=> false
-isError(/regex/) //=> false
-isError({a: 'b'}) //=> false
+isTypeofError(new TypeError('test'))           // => true
+isTypeofError(new KindError('test'))           // => true
+isTypeofError(new SyntaxError('test'))         // => true
+isTypeofError(new PluginError('test', 'msg'))  // => true
+
+isTypeofError(new CustomClass('test'))         // => false
+isTypeofError(new Object({a: 'b'}))            // => false
+isTypeofError(new RegExp('test'))              // => false
+isTypeofError(Object.create({a: 'b'}))         // => false
+isTypeofError(/regex/)                         // => false
+isTypeofError({a: 'b'})                        // => false
 ```
 
 ## Related
 * [error-base](https://www.npmjs.com/package/error-base): Create custom Error classes. | [homepage](https://github.com/doowb/error-base)
-* [is-kindof](https://www.npmjs.com/package/is-kindof): Check type of given javascript value. Support promises, generators, streams, and native types. Thin wrapper… [more](https://www.npmjs.com/package/is-kindof) | [homepage](https://github.com/tunnckocore/is-kindof)
-* [kind-error](https://www.npmjs.com/package/kind-error): Base class for easily creating meaningful and quiet by default Error classes with sane defaults… [more](https://www.npmjs.com/package/kind-error) | [homepage](https://github.com/tunnckocore/kind-error)
-* [kind-of-extra](https://www.npmjs.com/package/kind-of-extra): Additional functionality to `kind-of` type check utility, support promises, generators, streams, errors. Like that `kindOf(new… [more](https://www.npmjs.com/package/kind-of-extra) | [homepage](https://github.com/tunnckocore/kind-of-extra)
-* [kind-of-types](https://www.npmjs.com/package/kind-of-types): List of all javascript types. Used and useful for checking, validation, sanitizing and testing. Like… [more](https://www.npmjs.com/package/kind-of-types) | [homepage](https://github.com/tunnckocore/kind-of-types)
+* [is-kindof](https://www.npmjs.com/package/is-kindof): Check type of given javascript value. Support promises, generators, streams, and native types… [more](https://www.npmjs.com/package/is-kindof) | [homepage](https://github.com/tunnckocore/is-kindof)
+* [kind-error](https://www.npmjs.com/package/kind-error): Base class for easily creating meaningful and quiet by default Error classes with sane… [more](https://www.npmjs.com/package/kind-error) | [homepage](https://github.com/tunnckocore/kind-error)
+* [kind-of](https://www.npmjs.com/package/kind-of): Get the native type of a value. | [homepage](https://github.com/jonschlinkert/kind-of)
+* [kind-of-extra](https://www.npmjs.com/package/kind-of-extra): Additional functionality to `kind-of` type check utility, support promises, generators… [more](https://www.npmjs.com/package/kind-of-extra) | [homepage](https://github.com/tunnckocore/kind-of-extra)
+* [kind-of-types](https://www.npmjs.com/package/kind-of-types): List of all javascript types. Used and useful for checking, validation, sanitizing and… [more](https://www.npmjs.com/package/kind-of-types) | [homepage](https://github.com/tunnckocore/kind-of-types)
 
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/is-typeof-error/issues/new).  
