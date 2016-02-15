@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "assertit": "^0.1.0",
-    "error-base": "^0.2.0",
     "kind-error": "^2.0.0",
     "plugin-error": "^0.1.2",
     "pre-commit": "*"

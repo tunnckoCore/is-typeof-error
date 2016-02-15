@@ -15,61 +15,35 @@ var KindError = require('kind-error')
 var PluginError = require('plugin-error')
 var CustomClass = function () {}
 
-test('is-typeof-error:', function () {
-  test('should return true for `new TypeError()`', function (done) {
-    var actual = isError(new TypeError('test'))
-    var expected = true
-
-    test.equal(actual, expected)
-    done()
-  })
-  test('should return true for `new SyntaxError()`', function (done) {
-    var actual = isError(new SyntaxError('test'))
-    var expected = true
-
-    test.equal(actual, expected)
-    done()
-  })
-  test('should return true for `new KindError()`', function (done) {
-    var actual = isError(new KindError('test'))
-    var expected = true
-
-    test.equal(actual, expected)
-    done()
-  })
-  test('should return true for `new PluginError()`', function (done) {
-    var actual = isError(new PluginError('foo', 'msg'))
-    var expected = true
-
-    test.equal(actual, expected)
-    done()
-  })
-  test('should return false for `new CustomClass()`', function (done) {
-    var actual = isError(new CustomClass())
-    var expected = false
-
-    test.equal(actual, expected)
-    done()
-  })
-  test('should return false for plain objects', function (done) {
-    var actual = isError({a: 'b'})
-    var expected = false
-
-    test.equal(actual, expected)
-    done()
-  })
-  test('should return false for objects from ctor', function (done) {
-    var actual = isError(Object.create({a: 'b'}))
-    var expected = false
-
-    test.equal(actual, expected)
-    done()
-  })
-  test('should return false for regexp object', function (done) {
-    var actual = isError(/regex/)
-    var expected = false
-
-    test.equal(actual, expected)
-    done()
-  })
+test('should return true for `new TypeError()`', function (done) {
+  test.strictEqual(isError(new TypeError('test')), true)
+  done()
+})
+test('should return true for `new SyntaxError()`', function (done) {
+  test.strictEqual(isError(new SyntaxError('test')), true)
+  done()
+})
+test('should return true for `new KindError()`', function (done) {
+  test.strictEqual(isError(new KindError('test')), true)
+  done()
+})
+test('should return true for `new PluginError()`', function (done) {
+  test.strictEqual(isError(new PluginError('foo', 'msg')), true)
+  done()
+})
+test('should return false for `new CustomClass()`', function (done) {
+  test.strictEqual(isError(new CustomClass()), false)
+  done()
+})
+test('should return false for plain objects', function (done) {
+  test.strictEqual(isError({a: 'b'}), false)
+  done()
+})
+test('should return false for objects from ctor', function (done) {
+  test.strictEqual(isError(Object.create({a: 'b'})), false)
+  done()
+})
+test('should return false for regexp object', function (done) {
+  test.strictEqual(isError(/regex/), false)
+  done()
 })
