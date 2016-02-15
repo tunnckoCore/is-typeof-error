@@ -1,9 +1,10 @@
 {
   "name": "is-typeof-error",
   "version": "1.0.1",
-  "description": "Check that given value is any type of error and instanceof Error",
+  "description": "Check that given value is any type of error and instanceof Error.",
   "repository": "tunnckoCore/is-typeof-error",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -14,22 +15,26 @@
   },
   "devDependencies": {
     "assertit": "^0.1.0",
-    "kind-error": "^1.0.0",
-    "plugin-error": "^0.1.2"
+    "error-base": "^0.2.0",
+    "kind-error": "^2.0.0",
+    "plugin-error": "^0.1.2",
+    "pre-commit": "*"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
-    "any",
-    "check",
-    "error",
-    "instance",
-    "instanceof",
-    "is",
-    "kind",
-    "kindof",
-    "tool",
-    "type",
-    "typeof",
-    "util",
-    "validate"
-  ]
+    "is-typeof-error"
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "error-base",
+        "is-kindof",
+        "kind-error",
+        "kind-of-extra",
+        "kind-of-types"
+      ]
+    }
+  }
 }
